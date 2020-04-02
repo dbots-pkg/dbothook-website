@@ -1,8 +1,8 @@
 {
-  "name": "dbots-website",
-  "version": "2.3.0",
+  "name": "dbothook-website",
+  "version": "1.0.0",
   "private": true,
-  "description": "The website housing documentation for dbots",
+  "description": "The website housing documentation for dbothook",
   "author": "Federico Grandi <fgrandi30@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",

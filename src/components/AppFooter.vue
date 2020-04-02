@@ -2,19 +2,19 @@
   <footer>
     <container>
       <strong>
-        <router-link to="/">dbots</router-link>
+        <router-link to="/">dbothook</router-link>
       </strong>
       <p>The universal count poster</p>
       <a class="icon-link" href="https://github.com/dbots-pkg">
         <i class="fab fa-github"></i>
       </a>
-      <a class="icon-link" href="https://npmjs.org/package/dbots">
+      <a class="icon-link" href="https://npmjs.org/package/dbothook">
         <i class="fab fa-npm"></i>
       </a>
-      <a class="icon-link" href="https://yarn.pm/dbots">
+      <a class="icon-link" href="https://yarn.pm/dbothook">
         <i class="fab fa-yarn"></i>
       </a>
-      <a class="icon-link" href="https://www.jsdelivr.com/package/npm/dbots">
+      <a class="icon-link" href="https://www.jsdelivr.com/package/npm/dbothook">
         <i class="fa fa-server"></i>
       </a>
       <stats/>

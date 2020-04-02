@@ -6,7 +6,7 @@
       <br>
       <br>
       <div class="cli-command">
-        <code>{{ yarn ? 'yarn add' : 'npm i' }} {{ showDevCommand ? (yarn ? `ssh://github.com/${repo}#master` : `${repo}#master`) : 'dbots' }}</code>
+        <code>{{ yarn ? 'yarn add' : 'npm i' }} {{ showDevCommand ? (yarn ? `ssh://github.com/${repo}#master` : `${repo}#master`) : 'dbothook' }}</code>
         <em v-on:click="copy" class="fa fa-clipboard"></em>
       </div>
       <div class="below-command">
@@ -19,27 +19,29 @@
     <section id="info">
       <div class="info-item">
         <h2>About</h2>
-        <p>dbots.js is a package that allows you to automatically post your bot stats to multiple bot lists.</p>
-        <p>The module also provides some interfaces for other requests to the list APIs, so that everything can be done with the same package, instead of having to make the requests youself or dealing with multiple packages.</p>
+        <p><code>dbothook</code> helps Discord bot developers recieve webhook events from multiple bot lists.</p>
+        <p>You can create an express application straight from the hook or integrate endpoints into an existing application.</p>
       </div>
 
       <div class="info-item">
         <h2>Example</h2>
-        <pre><code class="javascript" v-hljs>const Discord = require('discord.js');
-const client = new Discord.Client();
-const dbots = require('dbots');
-const poster = new dbots.Poster({
-    client,
-    apiKeys: {
-        discordbotsgg: '…',
+        <pre><code class="javascript" v-hljs>const DBotHook = require('dbothook');
+const hook = new DBotHook({
+    authSecrets: {
         topgg: '…',
-        lsterminalink: '…',
-        carbon: '…'
-    },
-    clientLibrary: 'discord.js'
+        discordboats: '…',
+        discordbotlist: '…',
+        botsfordiscord: '…'
+    }
 });
 
-poster.startInterval(); // starts an interval thats posts to all services every 30 minutes</code></pre>
+hook.listen(5478);
+hook.on('called', event => {
+  // Give them some perks...
+});
+
+// This should open endpoints for each bot list
+// For example, you can set your webhook URL to "https://some.site/topgg" and start collecting requests.</code></pre>
       </div>
 
       <div class="info-item">
@@ -221,7 +223,7 @@ export default {
           margin-left: 15px;
 
           &:before {
-            content: '/';
+            content: "/";
             display: inline-block;
             text-decoration: none;
             pointer-events: none;
@@ -294,7 +296,6 @@ export default {
     }
   }
 }
-
 
 @include keyframes(cliFadeInUp) {
   from {

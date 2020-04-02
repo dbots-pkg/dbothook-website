@@ -5,8 +5,8 @@ const branchBlacklist = new Set(['docs', 'webpack', 'v8']);
 export default new DocsSource({
   id: 'main',
   name: 'Main library',
-  global: 'dbots',
-  repo: 'dbots-pkg/dbots.js',
+  global: 'dbothook',
+  repo: 'dbots-pkg/dbothook.js',
   defaultTag: 'latest',
   branchFilter: branch =>
     !branchBlacklist.has(branch) && !branch.startsWith('dependabot/'),

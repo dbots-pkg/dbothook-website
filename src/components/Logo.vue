@@ -1,5 +1,5 @@
 <template>
-  <svg class="dbots-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434.63 400">
+  <svg class="dbothook-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434.63 400">
     <g>
       <g class="text">
         <path
@@ -47,7 +47,7 @@ export default {
 @import "../styles/theming";
 @import "../styles/animation";
 
-.dbots-logo {
+.dbothook-logo {
   overflow: visible !important;
   width: 100%;
   max-width: 400px;
@@ -79,7 +79,6 @@ export default {
     fill: $color-content-text-dark;
   }
 }
-
 
 @include keyframes(logoFadeInUp) {
   from {

@@ -4,39 +4,39 @@
       <h3>{{ downloads }}</h3>
       <span>Downloads</span>
     </div>
-    <a href="https://bundlephobia.com/result?p=dbots" class="stat-card">
+    <a href="https://bundlephobia.com/result?p=dbothook" class="stat-card">
       <h3>{{ size }}</h3>
       <span>Kilobytes</span>
     </a>
-    <a href="https://github.com/dbots-pkg/dbots.js/stargazers" class="stat-card">
+    <a href="https://github.com/dbots-pkg/dbothook.js/stargazers" class="stat-card">
       <h3>{{ stars }}</h3>
       <span>Stars</span>
     </a>
-    <a href="https://github.com/dbots-pkg/dbots.js/graphs/contributors" class="stat-card">
+    <a href="https://github.com/dbots-pkg/dbothook.js/graphs/contributors" class="stat-card">
       <h3>{{ contributors }}</h3>
       <span>Contributors</span>
     </a>
-    <a v-if="usedBy" href="https://github.com/dbots-pkg/dbots.js/network/dependents?package_id=UGFja2FnZS0zNzA1MzQ1MA%3D%3D" class="stat-card">
+    <a v-if="usedBy" href="https://github.com/dbots-pkg/dbothook.js/network/dependents?package_id=UGFja2FnZS0zNzA1MzQ1MA%3D%3D" class="stat-card">
       <h3>{{ usedBy }}</h3>
-      <span>GitHub repos using dbots.js</span>
+      <span>GitHub repos using dbothook.js</span>
     </a>
-    <a href="https://github.com/dbots-pkg/dbots.js/commits/master" class="stat-card">
+    <a href="https://github.com/dbots-pkg/dbothook.js/commits/master" class="stat-card">
       <h3>{{ commits }}</h3>
       <span>Commits to master</span>
     </a>
-    <a v-if="openIssues" href="https://github.com/dbots-pkg/dbots.js/issues" class="stat-card">
+    <a v-if="openIssues" href="https://github.com/dbots-pkg/dbothook.js/issues" class="stat-card">
       <h3>{{ openIssues }}</h3>
       <span>Open Issues</span>
     </a>
-    <a href="https://github.com/dbots-pkg/dbots.js/watchers" class="stat-card">
+    <a href="https://github.com/dbots-pkg/dbothook.js/watchers" class="stat-card">
       <h3>{{ watchers }}</h3>
       <span>Watchers</span>
     </a>
-    <a v-if="forks" href="https://github.com/dbots-pkg/dbots.js/network/members" class="stat-card">
+    <a v-if="forks" href="https://github.com/dbots-pkg/dbothook.js/network/members" class="stat-card">
       <h3>{{ forks }}</h3>
       <span>Forks</span>
     </a>
-    <a href="https://www.npmjs.com/package/dbots?activeTab=versions" class="stat-card">
+    <a href="https://www.npmjs.com/package/dbothook?activeTab=versions" class="stat-card">
       <h3>{{ versions }}</h3>
       <span>Versions Published</span>
     </a>
@@ -94,23 +94,23 @@ export default {
         usedBy,
       ] = await Promise.all([
         fetch(
-          'https://api.npmjs.org/downloads/range/2013-08-21:2100-08-21/dbots',
+          'https://api.npmjs.org/downloads/range/2013-08-21:2100-08-21/dbothook',
         ).then(json, noop),
-        fetch('https://api.github.com/repos/dbots-pkg/dbots.js').then(
+        fetch('https://api.github.com/repos/dbots-pkg/dbothook.js').then(
           json,
           noop,
         ),
         fetch(
-          'https://api.github.com/repos/dbots-pkg/dbots.js/stats/contributors',
+          'https://api.github.com/repos/dbots-pkg/dbothook.js/stats/contributors',
         ).then(json, noop),
         fetch(
-          'https://api.github.com/repos/dbots-pkg/dbots.js/contributors',
+          'https://api.github.com/repos/dbots-pkg/dbothook.js/contributors',
         ).then(json, noop),
-        fetch('https://api.npms.io/v2/package/dbots').then(json, noop),
+        fetch('https://api.npms.io/v2/package/dbothook').then(json, noop),
         fetch(
-          'https://bundlephobia.com/api/size?package=dbots&record=true',
+          'https://bundlephobia.com/api/size?package=dbothook&record=true',
         ).then(json, noop),
-        fetch('https://api.snaz.in/v2/github/used-by/dbots-pkg/dbots.js').then(json, noop),
+        fetch('https://api.snaz.in/v2/github/used-by/dbots-pkg/dbothook.js').then(json, noop),
       ]);
 
       if (downloads) {
