@@ -57,5 +57,4 @@ export default new Router({
     // Catch-all
     { path: '*', component: UnknownRoutePage },
   ],
-  base: 'dbothook-website',
 });
