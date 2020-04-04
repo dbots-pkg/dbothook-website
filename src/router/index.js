@@ -16,6 +16,7 @@ const routes = [
     // Route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
+    // eslint-disable-next-line no-inline-comments
     component: () => import(/* WebpackChunkName: "about" */ '../views/About.vue'),
   },
 ];

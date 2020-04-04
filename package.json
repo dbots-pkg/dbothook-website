@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "lint": "vue-cli-service lint --fix",
     "dist": "echo Preparing for distribution... && npm i && npm run build && git add dist --force && git commit -m \"Update dist files\"",
     "serve:production": "vue-cli-service serve --mode production",
     "test": "if test \"$NODE_ENV\" = \"workflow\"; then echo ok; else echo no; fi"
