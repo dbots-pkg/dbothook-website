@@ -23,6 +23,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+  base: '/dbothook-website',
 });
 
 export default router;
