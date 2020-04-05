@@ -78,6 +78,9 @@ export default {
           Worker: 'https://nodejs.org/api/worker_threads.html#worker_threads_class_worker',
           MessagePort: 'https://nodejs.org/api/worker_threads.html#worker_threads_class_messageport',
           AxiosResponse: 'https://github.com/axios/axios#response-schema',
+          Express: 'https://expressjs.com/it/api.html#app',
+          Request: 'https://expressjs.com/it/api.html#req',
+          'http.Server': 'https://nodejs.org/api/http.html#http_class_http_server',
         };
 
         // Add links for everything
@@ -194,44 +197,44 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../../styles/theming';
+@import "../../styles/theming";
 
-  #docs-body {
+#docs-body {
+  background: $color-content-bg;
+
+  .sk-folding-cube {
+    display: block;
+    margin: 200px auto;
+  }
+  .sk-cube:before {
     background: $color-content-bg;
-
-    .sk-folding-cube {
-      display: block;
-      margin: 200px auto;
-    }
-    .sk-cube:before {
-      background: $color-content-bg;
-    }
   }
+}
 
-  #docs-error {
-    padding: 50px 0;
-    text-align: center;
-    font-size: 1.5rem;
+#docs-error {
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.5rem;
 
-    pre {
-      font-size: 1.0rem;
-    }
+  pre {
+    font-size: 1rem;
   }
+}
 
-  #app.dark #docs-body {
+#app.dark #docs-body {
+  background: $color-content-bg-dark;
+  color: $color-content-text-dark;
+
+  .sk-cube:before {
     background: $color-content-bg-dark;
-    color: $color-content-text-dark;
-
-    .sk-cube:before {
-      background: $color-content-bg-dark;
-    }
   }
+}
 
-  [data-scrolled] {
-    transition: background 1s;
-  }
+[data-scrolled] {
+  transition: background 1s;
+}
 
-  [data-scrolled='true'] {
-    background: $color-scrolled-bg;
-  }
+[data-scrolled="true"] {
+  background: $color-scrolled-bg;
+}
 </style>
