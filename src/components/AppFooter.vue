@@ -14,9 +14,6 @@
       <a class="icon-link" href="https://yarn.pm/dbothook">
         <i class="fab fa-yarn"></i>
       </a>
-      <a class="icon-link" href="https://www.jsdelivr.com/package/npm/dbothook">
-        <i class="fa fa-server"></i>
-      </a>
       <stats/>
       <a href id="dark-mode-link" @click="toggleDarkMode">
         <em class="fa" :class="darkMode ? 'fa-sun' : 'fa-moon'"></em>
