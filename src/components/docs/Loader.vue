@@ -80,7 +80,7 @@ export default {
           AxiosResponse: 'https://github.com/axios/axios#response-schema',
           Express: 'https://expressjs.com/it/api.html#app',
           Request: 'https://expressjs.com/it/api.html#req',
-          'http.Server': 'https://nodejs.org/api/http.html#http_class_http_server',
+          Server: 'https://nodejs.org/api/http.html#http_class_http_server',
         };
 
         // Add links for everything
